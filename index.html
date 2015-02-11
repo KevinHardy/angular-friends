@@ -64,7 +64,28 @@
           </div>
         </li>
       </ul>
-    </div>
+      <div>
+        <!-- <ul ng-repeat="friend in friends">
+          <li>{{friend.name}}</li>
+          <li>{{friend.pic_square}}</li>
+          <li>{{friend.current_location}}</li>
+          <li>{{friend.status}}</li>
+          <li>{{friend.friend_count}}</li>
+          <li>{{friend.$$hashKey}}</li>
+        </ul> -->
 
+        <ul>
+          <li class='friend' ng-repeat="friend in friends">
+          <img class="profile-pic">{{friend.pic_square}}</img>
+            <h3>{{friend.name}}</h3>
+            <div class="location">{{friend.current_location}}</div>      
+            <div class="status">
+              {{friend.status}} <span class="hashtag">{{friend.$$hashKey}}</span>
+            </div>      
+            <div class="num-friends">{{friend.$$hashKey}}</div>
+          </li>
+        </ul>
+      </div>
+    </div>
   </body>
 </html>
